@@ -36,7 +36,7 @@ CREATE TABLE walk_event (
     meeting_point VARCHAR(255),
     max_participants INT(5),
     current_participants INT(5),
-    FOREIGN KEY (organiser_id) REFERENCES users(user_id)
+   
 );
 
 DESCRIBE walk_event;
@@ -46,8 +46,7 @@ CREATE TABLE participants (
     event_id INT(10)  NOT NULL,  -- Assuming event_id is the foreign key referencing walk_event(event_id)
     user_id INT(10)  NOT NULL,   -- Assuming user_id is the foreign key referencing users(user_id)
     status VARCHAR(255),  -- Adjust the datatype as needed
-    FOREIGN KEY (event_id) REFERENCES walk_event(event_id),
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+   
 );
 
 DESCRIBE participants;
@@ -58,11 +57,9 @@ CREATE TABLE participants (
     receiver_id INT(10),
     event_id INT(10),
     message_timestamp TIMESTAMP,
-    content VARCHAR(255),  -- Adjust the length as needed
-    FOREIGN KEY (event_id) REFERENCES walk_event(event_id),
-    FOREIGN KEY (sender_id) REFERENCES users(user_id),
-    FOREIGN KEY (receiver_id) REFERENCES users(user_id)
-);
+    content VARCHAR(255),  -- Adjust the length as needed 
+)
+   
 
 DESCRIBE message;
 
@@ -75,9 +72,7 @@ CREATE TABLE reviews (
     rating INT(5),
     comment VARCHAR(255),
     review_timestamp TIMESTAMP,
-    FOREIGN KEY (event_id) REFERENCES walk_event(event_id),
-    FOREIGN KEY (reviewed_user_id) REFERENCES users(user_id),
-    FOREIGN KEY (reviewer_user_id) REFERENCES users(user_id)
+    
 );
 
 DESCRIBE reviews

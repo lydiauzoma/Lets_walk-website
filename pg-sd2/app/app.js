@@ -59,10 +59,6 @@ app.get('/login', (req, res) => {
   res.render('login', { pageTitle: 'Login Page' });
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
-
 
 // Start server on port 3000
 app.listen(3000,function(){

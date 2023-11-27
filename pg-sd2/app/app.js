@@ -47,6 +47,23 @@ app.get("/hello/:name", function(req, res) {
     res.send("Hello " + req.params.name);
 });
 
+
+/*const express = require('express');
+const app = express();
+const port = 3000;*/
+
+app.set('view engine', 'pug'); // Set Pug as the view engine
+
+app.get('/login', (req, res) => {
+  // You can pass data to the template using an object
+  res.render('login', { pageTitle: 'Login Page' });
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
+
+
 // Start server on port 3000
 app.listen(3000,function(){
     console.log(`Server running at http://127.0.0.1:3000/`);

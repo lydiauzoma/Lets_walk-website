@@ -1,7 +1,13 @@
-extends layout
-block content
-    h1 #{heading}
-     p first paragraph xxx
-     p now lets loop 
-     each item in data 
-     p #{item}
+html
+  head
+    title Login Page
+  body
+    h1 Login
+    form(action='/login', method='post')
+      label(for='username') Username:
+      input(type='text', name='username')
+      br
+      label(for='password') Password:
+      input(type='password', name='password')
+      br
+      input(type='submit', value='Login')

@@ -1,6 +1,6 @@
-# Lets_walk-website
 
-# LetWalk App
+
+# LetWalk website
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -54,4 +54,4 @@ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Contact
-If you have any questions or suggestions, feel free to reach out to us at your-email@example.com.
+If you have any questions or suggestions, feel free to reach out to us at lydiauzoma@yahoo.com.

@@ -1,0 +1,38 @@
+html
+  head
+    title Let's Walk
+
+  body
+    header
+      h1 Walking Partners
+
+    section#walking-filters
+      h2 Filter Options
+      form(action='/filter' method='GET')
+        label(for='filterName') Name:
+        input(type='text' id='filterName' name='filterName')
+
+        label(for='filterCompatibility') Compatibility:
+        input(type='range' id='filterCompatibility' name='filterCompatibility' min='1' max='100')
+        output(for='filterCompatibility') #{filterCompatibility}
+
+        label(for='filterWorkingMoms') Working Moms Only:
+        input(type='checkbox' id='filterWorkingMoms' name='filterWorkingMoms')
+
+        button(type='submit') Apply Filters
+
+    section#walking-partners
+      h2 Potential Walking Partners 
+
+      if walkingPartners.length > 0
+        ul
+          each partner in walkingPartners
+            li
+              h3= partner.name
+              p= partner.bio
+              p Compatibility: #{partner.compatibility}
+              button(type='button' onclick=`sendRequest('${partner.id}')`) Send Walking Request
+      else
+        p No potential walking buddies found.
+
+ 

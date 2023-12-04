@@ -8,52 +8,41 @@ const app = express();
 app.set('view engine', 'pug');
 app.set('views', './app/views');
 
-// Add static files location
-app.use(express.static("static"));
-
-// Get the functions in the db.js file to use
-const db = require('./services/db');
-
 // Create a route for the root - /
-app.get("/", async function (req, res) {
+app.get("/", (req, res) => {
+  res.send("Hello, this is the root path!");
+});
+
+// Create a route for /contact
+app.get("/contact", (req, res) => {
     try {
-        // Replace this with your actual logic to fetch walking buddies from the database
-        const walkingPartners = await fetchWalkingPartners();
-        
-        res.render("walkBuddies", { title: 'Walking Buddies', walkingPartners });
+      res.render("contact-page");
     } catch (error) {
-        console.error(error);
-        res.status(500).send("Internal Server Error");
+      console.error(error);
+      res.status(500).send("Internal Server Error");
     }
+  });
+  
+
+// Create a route for /details
+app.get("/details", async function (req, res) {
+    res.render("details");
 });
 
-// Create a route for /goodbye
-app.get("/goodbye", function (req, res) {
-    res.send("Goodbye world!");
+// Create a route for /filter
+app.get("/filter", (req, res) => {
+    res.render('filter');
 });
 
-// Create a dynamic route for /hello/<name>
-app.get("/hello/:name", function (req, res) {
-    // req.params contains any parameters in the request
-    // We can examine it in the console for debugging purposes
-    console.log(req.params);
-    // Retrieve the 'name' parameter and use it in a dynamically generated page
-    res.send("Hello " + req.params.name);
+// Create a route for /search-results
+app.get("/search-results", function (req, res) {
+    res.render("search-results");
 });
 
-// Create a route for /login
-app.get('/login', (req, res) => {
-    // You can pass data to the template using an object
-    res.render('login', { pageTitle: 'Login Page' });
+// Create a route for /successful-selection
+app.get("/successful-selection", function (req, res) {
+    res.render("successful-selection");
 });
-
-// Function to fetch walking partners - replace this with your actual database query
-async function fetchWalkingPartners() {
-    return [
-        { name: 'John Doe', bio: 'A fellow working mom', compatibility: 80, id: 1 },
-        // Add more walking partners as needed
-    ];
-}
 
 // Start server on port 3000
 const port = 3000;

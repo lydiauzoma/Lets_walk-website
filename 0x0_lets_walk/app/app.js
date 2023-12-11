@@ -42,9 +42,11 @@ app.get("/filter", (req, res) => {
 // Create a route for /search-results
 app.get("/search-results", async function (req, res) {
   var sql = "SELECT * FROM Users "
-  var results = await db.query(sql);
-  console.log(results)
-    res.render("search-results");
+  db.query(sql).then(results => {
+    // Send the results rows to the all-students template
+    // The rows will be in a variable called data
+  res.render('search-results', {data: results});
+  });
 });
 
 

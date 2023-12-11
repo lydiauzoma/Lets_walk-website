@@ -4,21 +4,12 @@ html
 
   body
     header
+      console.log(results)
       h1 Walking Buddies
-
-    section#walking-partners
+      p #{results}
       h2 Potential Walking Buddies
 
-      if walkingPartners.length > 0
-        ul
-          each partner in walkingPartners
-            li
-              h3= partner.name
-              p= partner.bio
-              p Compatibility: #{partner.compatibility}
-              button(type='button' onclick=`sendRequest('${partner.id}')`) Send Walking Request
-      else
-        p No potential walking buddies found.
+    
 
     footer
       p © 2023 Walking Buddies App

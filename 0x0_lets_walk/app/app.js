@@ -1,12 +1,17 @@
-/*// Import express.js
-const express = require("express");
+// Import express.js
+
 
 // Create express app
+const port = 3000;
+const express = require("express");
 const app = express();
+
 
 // Set up Pug templating engine
 app.set('view engine', 'pug');
 app.set('views', './app/views');
+
+const db = require('./services/db');
 
 // Create a route for the root - /
 app.get("/", (req, res) => {
@@ -35,9 +40,14 @@ app.get("/filter", (req, res) => {
 });
 
 // Create a route for /search-results
-app.get("/search-results", function (req, res) {
+app.get("/search-results", async function (req, res) {
+  var sql = "SELECT * FROM Users "
+  var results = await db.query(sql);
+  console.log(results)
     res.render("search-results");
 });
+
+
 
 // Create a route for /successful-selection
 app.get("/successful-selection", function (req, res) {
@@ -45,18 +55,11 @@ app.get("/successful-selection", function (req, res) {
 });
 
 // Start server on port 3000
-const port = 3000;
 app.listen(port, function () {
     console.log(`Server running at http://127.0.0.1:${port}/`);
-});*/
+});
 
-const express = require('express');
-const path = require('path');
-
-const app = express();
-const port = 3000;
-
-// Set the view engine to Pug
+/*// Set the view engine to Pug
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -67,9 +70,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
   const walkingPartners = []; // Replace with your data
   res.render('index', { walkingPartners });
-});
+});*/
 
 // Start the server
-app.listen(port, () => {
+/*app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
-});
+});*/

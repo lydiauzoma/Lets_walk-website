@@ -1,0 +1,20 @@
+extend layout 
+
+block head
+    link(rel="stylesheet", href="styles.css") // Include your stylesheets here
+
+  
+   block content 
+      h1 letswalk
+    main
+      p Welcome to Works Connection! Connect with others for work opportunities.
+
+      // Loop through the array of users and display links
+      each user in users
+        .profile-links
+          a(href=`/user/${user.id}`)
+            img.profile-picture(src=user.profilePicture, alt=`${user.name}'s Profile Picture`)
+            p #{user.name}
+
+    footer
+      p © 2024 Works Connection

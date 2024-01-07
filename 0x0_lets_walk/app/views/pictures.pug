@@ -1,0 +1,10 @@
+extends layout
+
+block head
+  link(rel="stylesheet", href="/gallery.css")
+
+block content
+  h2 Gallery
+  .gallery
+    each idx in Array.from(Array(40).keys())
+        img.gallery-img(src=`https://picsum.photos/500/500/?random=${idx}`, alt="")

@@ -1,4 +1,44 @@
-extends layout 
-block content 
- h1 successful selection 
- //added successful selection
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Works Connection - Select Preferences
+    link(rel="stylesheet", href="styles.css") // Include your stylesheets here
+
+  body
+    header
+      h1 Works Connection
+    main
+      // Banner image
+      img.banner(src="banner-image.jpg", alt="People Walking")
+
+      h2 Select Your Preferences
+      p Choose your preferences to find the perfect walking partner.
+
+      // Form for selecting preferences
+      form(action="/connect", method="post")
+        label(for="location") Location:
+        input(type="text", id="location", name="location", required)
+        br
+
+        label(for="distance") Preferred Distance:
+        input(type="number", id="distance", name="distance", min="1", required)
+        span miles
+        br
+
+        label(for="pace") Preferred Pace:
+        select(id="pace", name="pace", required)
+          option(value="slow") Slow
+          option(value="moderate") Moderate
+          option(value="fast") Fast
+        br
+
+        label(for="interests") Interests:
+        input(type="text", id="interests", name="interests")
+        p Separate multiple interests with commas.
+        br
+
+        button(type="submit") Connect
+
+    footer
+      p © 2024 Works Connection

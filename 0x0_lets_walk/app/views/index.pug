@@ -1,0 +1,11 @@
+extends layout.pug
+
+block head
+  link(rel="stylesheet", href="/index.css")
+
+block content
+  .intro
+    h1(class="title") let walk 
+    - const make a match  = sumPopulation['SUM(Population)'];
+    p(class="text") The population of the world is: 
+    h2(class="counter counter-animation") #{Number(population).toLocaleString()}

@@ -1,0 +1,101 @@
+.about {
+    display: grid;
+    /* Sets the display property of .about to grid */
+    grid-template-columns: repeat(4, 1fr);
+    /* Defines the grid template columns for .about to repeat 4 columns each with a width of 1fr (fraction) */
+    gap: 2rem;
+    /* Sets the gap between grid items within .about to 2rem */
+}
+
+.profile {
+    border: 2px solid #ddd;
+    /* Sets a 2px solid border with color #ddd for .profile */
+    border-radius: 10px;
+    /* Sets a border radius of 10px for .profile */
+    padding: 1rem;
+    /* Sets the padding for .profile to 1rem */
+    background-color: #fff;
+    /* Sets the background color of .profile to #fff (white) */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sets a box shadow for .profile with offset-x of 0px, offset-y of 4px, blur radius of 8px, and color rgba(0, 0, 0, 0.1) */
+    transition: all 0.2s ease-in-out;
+    /* Applies a transition effect with a duration of 0.2s and an easing function of ease-in-out to all properties of .profile */
+
+}
+
+.profile:hover {
+    transform: translateY(-5px);
+    /* Applies a translateY transformation of -5px (moves the element 5 pixels up) on hover for .profile */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    /* Modifies the box shadow for .profile on hover with a blur radius of 16px */
+
+}
+
+.profile img {
+    width: 100%;
+    /* Sets the width of .profile img to 100% */
+    height: auto;
+    /* Sets the height of .profile img to auto, maintaining its aspect ratio */
+    object-fit: cover;
+    /* Sets the object-fit property of .profile img to cover, ensuring the image covers the entire element */
+    border-radius: 50%;
+    /* Sets a border radius of 50% for .profile img, making it a circle */
+    border: 3px solid #fff;
+    /* Sets a 3px solid border with color #fff (white) for .profile img */
+}
+
+.profile h3 {
+    margin: 1rem 0;
+    /* Sets the margin for .profile h3 to 1rem (top and bottom) and 0 (left and right) */
+    font-size: 1.2rem;
+    /* Sets the font size of .profile h3 to 1.2rem */
+    color: #333;
+    /* Sets the color of .profile h3 to #333 (dark gray) */
+}
+
+.profile p {
+    font-size: 1rem;
+    /* Sets the font size of .profile p to 1rem */
+    color: #666;
+    /* Sets the color of .profile p to #666 (gray) */
+    line-height: 1.2;
+    /* Sets the line height of .profile p to 1.2 */
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    /* Display as an inline block element */
+    padding: 0.75rem 1.5rem;
+    /* Padding on top/bottom and left/right */
+    background-color: #10a50e;
+    /* Background color */
+    color: white;
+    /* Text color */
+    border-radius: 0.5rem;
+    /* Border radius to create rounded corners */
+    text-align: center;
+    /* Text alignment at the center */
+    text-decoration: none;
+    /* Remove underline from links */
+    font-size: 1rem;
+    /* Font size */
+    transition: all 0.2s ease-in-out;
+    /* Transition effect on hover with ease-in-out timing */
+    border: none;
+    /* No border */
+    cursor: pointer;
+    /* Cursor changes to a pointer on hover */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Box shadow for a subtle 3D effect */
+}
+
+/* Hover styles for the button */
+.btn:hover {
+    background-color: #ffd700;
+    /*  Background color on hover */
+    color: #0077b6;
+    /*  Text color on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /*  Box shadow on hover for a more pronounced 3D effect */
+    

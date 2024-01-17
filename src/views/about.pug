@@ -1,0 +1,109 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="title", content="Lets Walk — walking ste")
+    meta(name="description")
+    meta(property="og:url", content="https://letwalk.com")
+    meta(property="og:type", content="website")
+    meta(property="twitter:card", content="summary_large_image")
+    meta(name="theme-color", content="#070826")
+    meta(property="og:locale", content="en")
+    meta(property="og:site_name", content="Lets Walk")
+    meta(property="og:image", content="/assets/images/meta/banner.jpg")
+    meta(property="og:image:alt", content="Lets Walk — free walks")
+    link(rel="shortcut icon", href="/assets/images/meta/favicon.png", type="image/png")
+    link(rel="stylesheet", href="/assets/css/main.css")
+    script(src="/assets/js/script.js", defer="")
+    link(rel="stylesheet", href="/assets/css/creators.css")
+    title Creators — Lets Walk
+  body
+    header.header
+      //- remove the line below to hide the notice
+      .header__notice.notice
+        .notice__text
+          | Welcome to LetWalk this code can be found
+          a(href="https://github.com/lydiauzoma/Lets_walk-website") here
+      .header__content
+        a.logo(href="/")
+          img.logo__image(src="/assets/images/logo.webp", alt="Logo", width="30", height="30")
+          p.logo__name Lets Walk
+        input.header__menu(type="checkbox", name="menu", aria-label="menu")
+        nav.header__links
+          a.header__link(href="/") Home
+          a.header__link(href="/plans") Plans
+          a.header__link(href="/location") Locations
+          a.header__link(href="/about") About
+        a.button.button--secondary(href="/register") SignUp
+        a.button.button--secondary(href="/register") SignIn
+        
+    .container
+      section.creators
+        h2.h2.h2--center(data-anim="") Creators
+        .creators__list
+          .creator(data-anim="")
+            img.creator__image(src="https://images.pexels.com/photos/718978/pexels-photo-718978.jpeg?auto=compress&cs=tinysrgb&w=600", alt="Lydia")
+            .creator__content
+              .creator__top
+                h3.creator__name Lydia
+                .media
+                  a.media__link(href="https://discord.com/users/https://images.pexels.com/photos/718978/pexels-photo-718978.jpeg?auto=compress&cs=tinysrgb&w=600")
+                    img.media__icon(src="/assets/images/icons/discord.svg", alt="discord", width="30", height="30")
+              p.creator__description
+          .creator(data-anim="")
+            img.creator__image(src="https://img.freepik.com/free-photo/medium-shot-male-flight-attendant-posing_23-2150312701.jpg?w=360&t=st=1704998727~exp=1704999327~hmac=dd5135c74dfd10da033ce4972ee188f76066e270b0818b40e0d1c183a332868c", alt="Thomas")
+            .creator__content
+              .creator__top
+                h3.creator__name Thomas
+                .media
+                  a.media__link(href="https://discord.com/users/https://img.freepik.com/free-photo/medium-shot-male-flight-attendant-posing_23-2150312701.jpg?w=360&t=st=1704998727~exp=1704999327~hmac=dd5135c74dfd10da033ce4972ee188f76066e270b0818b40e0d1c183a332868c")
+                    img.media__icon(src="/assets/images/icons/discord.svg", alt="discord", width="30", height="30")
+              p.creator__description
+          .creator(data-anim="")
+            img.creator__image(src="https://media.istockphoto.com/id/1328831714/photo/portrait-of-a-smiling-young-african-woman.jpg?s=1024x1024&w=is&k=20&c=a1Xd2Se5U5M3xBkL7w4ZNYaH8twI6SHD_jr_S-7GCNY=", alt="Cindy")
+            .creator__content
+              .creator__top
+                h3.creator__name Cindy
+                .media
+                  a.media__link(href="https://discord.com/users/https://media.istockphoto.com/id/1328831714/photo/portrait-of-a-smiling-young-african-woman.jpg?s=1024x1024&w=is&k=20&c=a1Xd2Se5U5M3xBkL7w4ZNYaH8twI6SHD_jr_S-7GCNY=")
+                    img.media__icon(src="/assets/images/icons/discord.svg", alt="discord", width="30", height="30")
+              p.creator__description
+          .creator(data-anim="")
+            img.creator__image(src="https://media.istockphoto.com/id/1308883046/photo/studio-portrait-of-serious-young-businesswoman-with-folded-arms-against-plain-background.jpg?s=1024x1024&w=is&k=20&c=ulFACgOd8tUd4-Qtd82eTpyv0y_y_hYtsyXDPwlgbys=", alt="Sustainability Advisor")
+            .creator__content
+              .creator__top
+                h3.creator__name Sustainability Advisor
+                .media
+                  a.media__link(href="https://discord.com/users/https://media.istockphoto.com/id/1308883046/photo/studio-portrait-of-serious-young-businesswoman-with-folded-arms-against-plain-background.jpg?s=1024x1024&w=is&k=20&c=ulFACgOd8tUd4-Qtd82eTpyv0y_y_hYtsyXDPwlgbys=")
+                    img.media__icon(src="/assets/images/icons/discord.svg", alt="discord", width="30", height="30")
+              p.creator__description
+      footer.footer
+        .footer__content
+          .footer__info
+            a.logo(href="/en/")
+              img.logo__image(src="/assets/images/logo.webp", alt="Logo", width="30", height="30")
+              p.logo__name Lets Walk
+            p.footer__description Explore the world on foot with LetWalk
+          .footer__section
+            h3.footer__title Legal
+            .footer__links
+              a.footer__link(href="/en/.html")
+          .footer__section
+            h3.footer__title Main
+            .footer__links
+              a.footer__link(href="/en/") Home
+              a.footer__link(href="/en/partners.html") Partnership
+              a.footer__link(href="/en/plans.html") Plans
+              a.footer__link(href="/en/locations.html") Locations
+              a.footer__link(href="/en/guides.html") Guides
+              a.footer__link(href="/en/support.html") Support
+        .copyright
+          p.copyright__text 2022-2023 Lets Walk. We are not affiliated with any brand.
+          .media
+            a.media__link(href="https://discord.gg/<DISCORD>")
+              img.media__icon(src="/assets/images/icons/discord.svg", alt="discord", width="30", height="30")
+            a.media__link(href="https://youtube.com/channel/<YOUTUBE>")
+              img.media__icon(src="/assets/images/icons/youtube.svg", alt="youtube", width="30", height="30")
+            a.media__link(href="tel:<PHONE>")
+              img.media__icon(src="/assets/images/icons/phone.svg", alt="phone", width="30", height="30")

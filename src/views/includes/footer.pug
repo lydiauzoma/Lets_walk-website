@@ -1,0 +1,37 @@
+mixin footer
+
+doctype html
+html(lang="en")
+    link(rel="stylesheet", href="/assets/css/main.css")
+    script(src="/assets/js/script.js", defer="")
+    title= pageTitle
+
+    footer.footer
+      .footer__content
+        .footer__info
+          a.logo(href="/en/")
+            img.logo__image(src="/assets/images/logo.webp", alt="Logo", width="30", height="30")
+            p.logo__name Lets Walk
+          p.footer__description Explore the world on foot with LetWalk
+        .footer__section
+          h3.footer__title Legal
+          .footer__links
+            a.footer__link(href="/en/.html")
+        .footer__section
+          h3.footer__title Main
+          .footer__links
+            a.footer__link(href="/en/") Home
+            a.footer__link(href="/en/partners.html") Partnership
+            a.footer__link(href="/en/plans.html") Plans
+            a.footer__link(href="/en/locations.html") Locations
+            a.footer__link(href="/en/guides.html") Guides
+            a.footer__link(href="/en/support.html") Support
+      .copyright
+        p.copyright__text 2022-2023 Lets Walk. We are not affiliated with any brand.
+        .media
+          a.media__link(href="https://discord.gg/<DISCORD>")
+            img.media__icon(src="/assets/images/icons/discord.svg", alt="discord", width="30", height="30")
+          a.media__link(href="https://youtube.com/channel/<YOUTUBE>")
+            img.media__icon(src="/assets/images/icons/youtube.svg", alt="youtube", width="30", height="30")
+          a.media__link(href="tel:<PHONE>")
+            img.media__icon(src="/assets/images/icons/phone.svg", alt="phone", width="30", height="30")

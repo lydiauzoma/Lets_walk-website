@@ -20,10 +20,11 @@ The application should now be accessible at http://localhost:3000.
 We welcome contributions from the community! If you're interested in contributing to LetWalk, please follow our contribution guidelines.
 
 ## Contributors
-Lydia Uzoma
-Cynthia Nwaka
-Susan
-Thomas
+Lydia Uzoma,
+Cynthia Nwaka,
+Susan Olofin,
+Thomas Enahoro,
+Ayodele Sunday.
 
 
 # License

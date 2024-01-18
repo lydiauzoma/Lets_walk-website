@@ -7,13 +7,13 @@ To run the LetWalk application locally, follow these steps:
    git clone https://github.com/your-username/letwalk.git
    
 2. Change Directory
-cd letswalk
+_cd letswalk_
 
-<h6>Install dependencies using npm:
-npm install
+###Install dependencies using npm:
+_npm install_
 
-<h6>Start the application:
-npm start
+###Start the application:
+_npm start_
 The application should now be accessible at http://localhost:3000.
 
 # Contributing

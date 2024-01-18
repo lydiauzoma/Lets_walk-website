@@ -9,9 +9,10 @@ To run the LetWalk application locally, follow these steps:
 2. Change Directory
 cd letswalk
 
-Install dependencies using npm:
+<h6>Install dependencies using npm:
 npm install
-Start the application:
+
+<h6>Start the application:
 npm start
 The application should now be accessible at http://localhost:3000.
 

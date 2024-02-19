@@ -14,6 +14,11 @@ const db = require("./services/db");
 app.get("/", function (req, res) {
   res.render("user");
 });
+// Create a route for root - /
+app.get("/", function (req, res) {
+  res.render("participants");
+});
+
 // Use the Pug templating engine
 app.set("view engine", "pug");
 app.set("views", "./app/views");
@@ -25,8 +30,8 @@ app.get("/user/:id", async function (req, res) {
   console.log(stId);
   sql = "SELECT * FROM `Users` WHERE user_id = ?";
   db.query(sql, [stId]).then((results) => {
-    console.log(results);
-    res.send(results);
+    // console.log(results);
+    res.render("user", { user: results[0] });
   });
   // res.render('student', {student:student});
 });

@@ -1,6 +1,50 @@
-html 
-    head    
-        title Title here...
-    body
-       h1 Lets_Walk
-       p first paragraph xxx
+doctype html
+html
+  head
+    title Title here...
+    style.
+      body {
+        background-color: #333; 
+        color: #333; 
+        font-family: Arial, sans-serif; 
+        padding: 20px; 
+      }
+      .container {
+        max-width: 600px; 
+        margin: 0 auto; 
+      }
+      h1 {
+        font-weight: bold;
+        color: #007bff; 
+      }
+      .user-details {
+        background-color: #fff;
+        padding: 20px; 
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        margin-top: 20px; 
+      }
+      .user-details h2 {
+        color: #007bff; 
+      }
+      .user-details p {
+        margin: 10px 0; 
+      }
+  body
+    .container
+      h1 Lets_Walk
+      h1 Welcome to our users page
+
+      .user-details
+        h2 User Details
+        p About #{user.username}
+        div
+          h3 Personal Information
+          p First Name: #{user.first_name}
+          p Last Name: #{user.last_name}
+          p DOB: #{user.DOB}
+          p Gender: #{user.gender}
+        div
+          h3 Location & Interests
+          p Location: #{user.location}
+          p Interest: #{user.interests}

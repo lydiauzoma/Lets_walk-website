@@ -12,7 +12,23 @@ const db = require("./services/db");
 
 // Create a route for root - /
 app.get("/", function (req, res) {
-  res.send("Hello world!");
+  res.render("user");
+});
+// Use the Pug templating engine
+app.set("view engine", "pug");
+app.set("views", "./app/views");
+
+// Single student page.  Show the students name, course and modules
+app.get("/user/:id", async function (req, res) {
+  var stId = req.params.id;
+  // Create a student class with the ID passed
+  console.log(stId);
+  sql = "SELECT * FROM `Users` WHERE user_id = ?";
+  db.query(sql, [stId]).then((results) => {
+    console.log(results);
+    res.send(results);
+  });
+  // res.render('student', {student:student});
 });
 
 // Create a route for testing the db

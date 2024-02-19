@@ -10,6 +10,7 @@ app.use(express.static("static"));
 // Get the functions in the db.js file to use
 const db = require("./services/db");
 
+<<<<<<< HEAD
 // Create a route for root - /
 app.get("/", function (req, res) {
   res.render("user");
@@ -35,6 +36,19 @@ app.get("/user/:id", async function (req, res) {
   });
   // res.render('student', {student:student});
 });
+=======
+app.set('view engine', 'pug');
+app.set('views', './app/views');
+
+/* Create a route for root - /
+app.get("/", function (req, res) {
+  res.send("Hello world!");
+});*/
+
+app.get("/", function(req, res) {
+  res.render("user");
+})
+>>>>>>> dbae88dacaf8b6dcfeba9f394a12ba9e8ab61556
 
 // Create a route for testing the db
 app.get("/db_test", function (req, res) {
